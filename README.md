@@ -15,6 +15,10 @@
 
 [![asciicast](https://asciinema.org/a/e3xe8C2ElWqidkuX3giIej2Cx.svg)](https://asciinema.org/a/e3xe8C2ElWqidkuX3giIej2Cx)
 
+## Example brain-progression
+
+[![asciicast](https://asciinema.org/a/yURfGkcLoo80JFUFsMPmdanZW.svg)](https://asciinema.org/a/yURfGkcLoo80JFUFsMPmdanZW)
+
 ## Setup
 
 ```sh
