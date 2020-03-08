@@ -19,6 +19,10 @@
 
 [![asciicast](https://asciinema.org/a/yURfGkcLoo80JFUFsMPmdanZW.svg)](https://asciinema.org/a/yURfGkcLoo80JFUFsMPmdanZW)
 
+## Example brain-prime
+
+[![asciicast](https://asciinema.org/a/9oMPLcssjXY5w1I266CNGer5n.svg)](https://asciinema.org/a/9oMPLcssjXY5w1I266CNGer5n)
+
 ## Setup
 
 ```sh
