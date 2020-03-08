@@ -11,6 +11,10 @@
 
 [![asciicast](https://asciinema.org/a/p3DK2uvBQyXLwX3q5ORVI2FNR.svg)](https://asciinema.org/a/p3DK2uvBQyXLwX3q5ORVI2FNR)
 
+## Example brain-gcd
+
+[![asciicast](https://asciinema.org/a/e3xe8C2ElWqidkuX3giIej2Cx.svg)](https://asciinema.org/a/e3xe8C2ElWqidkuX3giIej2Cx)
+
 ## Setup
 
 ```sh
