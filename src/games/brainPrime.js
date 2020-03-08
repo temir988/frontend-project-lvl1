@@ -18,9 +18,9 @@ const stepLogic = () => {
   return isPrime(a);
 };
 
-const brainPrime = (name) => {
+const brainPrime = () => {
   const gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  return game(name, gameConditions, stepLogic);
+  return game(gameConditions, stepLogic);
 };
 
 export default brainPrime;

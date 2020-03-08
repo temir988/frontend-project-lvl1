@@ -24,9 +24,9 @@ const stepLogic = () => {
   return String(progression[hiddenItemIndex]);
 };
 
-const brainProgression = (name) => {
+const brainProgression = () => {
   const gameConditions = 'What number is missing in the progression?';
-  return game(name, gameConditions, stepLogic);
+  return game(gameConditions, stepLogic);
 };
 
 export default brainProgression;

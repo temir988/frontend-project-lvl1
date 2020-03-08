@@ -1,6 +1,9 @@
 import readlineSync from 'readline-sync';
+import greeting from './greeting.js';
 
-const game = (name, gameConditions, stepLogic) => {
+const game = (gameConditions, stepLogic) => {
+  const name = greeting();
+
   console.log(gameConditions);
 
   const steps = 3;

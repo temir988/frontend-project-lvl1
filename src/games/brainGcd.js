@@ -22,9 +22,9 @@ const stepLogic = () => {
   return gcd(a, b);
 };
 
-const brainGcd = (name) => {
+const brainGcd = () => {
   const gameConditions = 'Find the greatest common divisor of given numbers.';
-  return game(name, gameConditions, stepLogic);
+  return game(gameConditions, stepLogic);
 };
 
 export default brainGcd;

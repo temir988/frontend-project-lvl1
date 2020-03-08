@@ -20,9 +20,9 @@ const stepLogic = () => {
   }
 };
 
-const brainCalc = (name) => {
+const brainCalc = () => {
   const gameConditions = 'What is the result of the expression?';
-  return game(name, gameConditions, stepLogic);
+  return game(gameConditions, stepLogic);
 };
 
 export default brainCalc;

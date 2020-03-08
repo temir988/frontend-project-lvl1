@@ -6,9 +6,9 @@ const stepLogic = () => {
   return (randomNumber % 2 === 0) ? 'yes' : 'no';
 };
 
-const brainEven = (name) => {
+const brainEven = () => {
   const gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
-  return game(name, gameConditions, stepLogic);
+  return game(gameConditions, stepLogic);
 };
 
 export default brainEven;
