@@ -7,15 +7,15 @@ const stepLogic = () => {
   const a = generateRandomNumber(100);
   const b = generateRandomNumber(100);
 
-  console.log(`Question: ${a} ${randomOperation} ${b}`);
+  const message = `Question: ${a} ${randomOperation} ${b}`;
 
   switch (randomOperation) {
     case '+':
-      return `${a + b}`;
+      return [message, `${a + b}`];
     case '-':
-      return `${a - b}`;
+      return [message, `${a - b}`];
     case '*':
-      return `${a * b}`;
+      return [message, `${a * b}`];
     default:
       return new Error(`Unknows operations: ${randomOperation}`);
   }

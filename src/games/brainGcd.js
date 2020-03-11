@@ -18,9 +18,10 @@ const stepLogic = () => {
   const a = generateRandomNumber(100);
   const b = generateRandomNumber(100);
 
-  console.log(`Question: ${a} ${b}`);
+  const message = `Question: ${a} ${b}`;
+  const answer = findGcd(a, b);
 
-  return findGcd(a, b);
+  return [message, answer];
 };
 
 const runBrainGcd = () => {

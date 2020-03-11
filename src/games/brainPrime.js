@@ -4,9 +4,9 @@ import { generateRandomNumber, isPrime } from '../utils.js';
 const stepLogic = () => {
   const a = generateRandomNumber(100);
 
-  console.log(`Question: ${a}`);
-
-  return (isPrime(a)) ? 'yes' : 'no';
+  const message = `Question: ${a}`;
+  const answer = isPrime(a) ? 'yes' : 'no';
+  return [message, answer];
 };
 
 const runBrainPrime = () => {

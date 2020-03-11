@@ -3,9 +3,10 @@ import { generateRandomNumber, isEven } from '../utils.js';
 
 const stepLogic = () => {
   const randomNumber = generateRandomNumber(100);
-  console.log(`Question: ${randomNumber}`);
+  const message = `Question: ${randomNumber}`;
+  const answer = isEven(randomNumber) ? 'yes' : 'no';
 
-  return (isEven(randomNumber)) ? 'yes' : 'no';
+  return [message, answer];
 };
 
 const runBrainEven = () => {
