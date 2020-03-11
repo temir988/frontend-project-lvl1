@@ -1,10 +1,11 @@
 import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
 
 const stepLogic = () => {
   const operations = ['+', '-', '*'];
-  const randomOperation = operations[Math.floor(Math.random() * operations.length)];
-  const a = Math.round(Math.random() * 100);
-  const b = Math.round(Math.random() * 100);
+  const randomOperation = operations[generateRandomNumber(operations.length, 'floor')];
+  const a = generateRandomNumber(100);
+  const b = generateRandomNumber(100);
 
   console.log(`Question: ${a} ${randomOperation} ${b}`);
 

@@ -1,7 +1,8 @@
 import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
 
 const stepLogic = () => {
-  const randomNumber = Math.round(Math.random() * 100);
+  const randomNumber = generateRandomNumber(100);
   console.log(`Question: ${randomNumber}`);
   return (randomNumber % 2 === 0) ? 'yes' : 'no';
 };

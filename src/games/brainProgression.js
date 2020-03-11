@@ -1,8 +1,9 @@
 import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
 
 const generateProgression = () => {
-  const a1 = Math.round(Math.random() * 10);
-  const d = Math.round(Math.random() * 10);
+  const a1 = generateRandomNumber(10);
+  const d = generateRandomNumber(10);
   const progressionLength = 10;
   const progression = [a1];
 
@@ -15,7 +16,7 @@ const generateProgression = () => {
 
 const stepLogic = () => {
   const progression = generateProgression();
-  const hiddenItemIndex = Math.floor(Math.random() * 10);
+  const hiddenItemIndex = generateRandomNumber(10, 'floor');
   const prevHidden = progression.slice(0, hiddenItemIndex).join(' ');
   const nextHidden = progression.slice(hiddenItemIndex + 1).join(' ');
 

@@ -1,4 +1,5 @@
 import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
 
 const findGcd = (num1, num2) => {
   let a = num1;
@@ -14,8 +15,8 @@ const findGcd = (num1, num2) => {
 };
 
 const stepLogic = () => {
-  const a = Math.round(Math.random() * 100);
-  const b = Math.round(Math.random() * 100);
+  const a = generateRandomNumber(100);
+  const b = generateRandomNumber(100);
 
   console.log(`Question: ${a} ${b}`);
 

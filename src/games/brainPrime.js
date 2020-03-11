@@ -1,4 +1,5 @@
 import startGame from '../index.js';
+import generateRandomNumber from '../utils.js';
 
 const isPrime = (num) => {
   const halfNum = Math.round(num / 2);
@@ -11,7 +12,7 @@ const isPrime = (num) => {
 };
 
 const stepLogic = () => {
-  const a = Math.round(Math.random() * 100);
+  const a = generateRandomNumber(100);
 
   console.log(`Question: ${a}`);
 
