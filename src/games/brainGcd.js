@@ -1,6 +1,6 @@
-import game from '../index.js';
+import startGame from '../index.js';
 
-const gcd = (num1, num2) => {
+const findGcd = (num1, num2) => {
   let a = num1;
   let b = num2;
   while (a !== 0 && b !== 0) {
@@ -19,12 +19,12 @@ const stepLogic = () => {
 
   console.log(`Question: ${a} ${b}`);
 
-  return gcd(a, b);
+  return findGcd(a, b);
 };
 
-const brainGcd = () => {
+const runBrainGcd = () => {
   const gameConditions = 'Find the greatest common divisor of given numbers.';
-  return game(gameConditions, stepLogic);
+  return startGame(gameConditions, stepLogic);
 };
 
-export default brainGcd;
+export default runBrainGcd;

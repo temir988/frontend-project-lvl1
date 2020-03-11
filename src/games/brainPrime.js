@@ -1,4 +1,4 @@
-import game from '../index.js';
+import startGame from '../index.js';
 
 const isPrime = (num) => {
   const halfNum = Math.round(num / 2);
@@ -18,9 +18,9 @@ const stepLogic = () => {
   return isPrime(a);
 };
 
-const brainPrime = () => {
+const runBrainPrime = () => {
   const gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  return game(gameConditions, stepLogic);
+  return startGame(gameConditions, stepLogic);
 };
 
-export default brainPrime;
+export default runBrainPrime;

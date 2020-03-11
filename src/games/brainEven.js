@@ -1,4 +1,4 @@
-import game from '../index.js';
+import startGame from '../index.js';
 
 const stepLogic = () => {
   const randomNumber = Math.round(Math.random() * 100);
@@ -6,9 +6,9 @@ const stepLogic = () => {
   return (randomNumber % 2 === 0) ? 'yes' : 'no';
 };
 
-const brainEven = () => {
+const runBrainEven = () => {
   const gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
-  return game(gameConditions, stepLogic);
+  return startGame(gameConditions, stepLogic);
 };
 
-export default brainEven;
+export default runBrainEven;

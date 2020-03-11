@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import greeting from './greeting.js';
 
-const game = (gameConditions, stepLogic) => {
+const startGame = (gameConditions, stepLogic) => {
   const name = greeting();
 
   console.log(gameConditions);
@@ -22,4 +22,4 @@ const game = (gameConditions, stepLogic) => {
   return console.log(`Congratulations, ${name}`);
 };
 
-export default game;
+export default startGame;

@@ -1,4 +1,4 @@
-import game from '../index.js';
+import startGame from '../index.js';
 
 const stepLogic = () => {
   const operations = ['+', '-', '*'];
@@ -20,9 +20,9 @@ const stepLogic = () => {
   }
 };
 
-const brainCalc = () => {
+const runBrainCalc = () => {
   const gameConditions = 'What is the result of the expression?';
-  return game(gameConditions, stepLogic);
+  return startGame(gameConditions, stepLogic);
 };
 
-export default brainCalc;
+export default runBrainCalc;

@@ -1,4 +1,4 @@
-import game from '../index.js';
+import startGame from '../index.js';
 
 const generateProgression = () => {
   const a1 = Math.round(Math.random() * 10);
@@ -24,9 +24,9 @@ const stepLogic = () => {
   return String(progression[hiddenItemIndex]);
 };
 
-const brainProgression = () => {
+const runBrainProgression = () => {
   const gameConditions = 'What number is missing in the progression?';
-  return game(gameConditions, stepLogic);
+  return startGame(gameConditions, stepLogic);
 };
 
-export default brainProgression;
+export default runBrainProgression;
