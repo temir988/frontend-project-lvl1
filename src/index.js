@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
-import greeting from './greeting.js';
 
 const startGame = (gameConditions, stepLogic) => {
-  const name = greeting();
-
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}`);
   console.log(gameConditions);
 
   const steps = 3;
