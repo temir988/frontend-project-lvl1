@@ -1,10 +1,11 @@
 import startGame from '../index.js';
-import generateRandomNumber from '../utils.js';
+import { generateRandomNumber, isEven } from '../utils.js';
 
 const stepLogic = () => {
   const randomNumber = generateRandomNumber(100);
   console.log(`Question: ${randomNumber}`);
-  return (randomNumber % 2 === 0) ? 'yes' : 'no';
+
+  return (isEven(randomNumber)) ? 'yes' : 'no';
 };
 
 const runBrainEven = () => {

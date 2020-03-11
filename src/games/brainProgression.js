@@ -1,5 +1,5 @@
 import startGame from '../index.js';
-import generateRandomNumber from '../utils.js';
+import { generateRandomNumber } from '../utils.js';
 
 const generateProgression = () => {
   const a1 = generateRandomNumber(10);
