@@ -4,13 +4,13 @@ import generateRandomNumber from '../utils.js';
 const gameConditions = 'What number is missing in the progression?';
 
 const generateProgression = () => {
-  const a1 = generateRandomNumber(10);
-  const d = generateRandomNumber(10);
+  const firstMember = generateRandomNumber(10);
+  const difference = generateRandomNumber(10);
   const progressionLength = 10;
-  const progression = [a1];
+  const progression = [firstMember];
 
   for (let i = 1; i < progressionLength; i += 1) {
-    progression.push(progression[progression.length - 1] + d);
+    progression.push(progression[progression.length - 1] + difference);
   }
 
   return progression;
