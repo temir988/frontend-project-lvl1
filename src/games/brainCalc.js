@@ -1,6 +1,19 @@
 import startGame from '../index.js';
 import generateRandomNumber from '../utils.js';
 
+const calculate = (operator, a, b) => {
+  switch (operator) {
+    case '+':
+      return a + b;
+    case '-':
+      return a - b;
+    case '*':
+      return a * b;
+    default:
+      return new Error(`Unknows operations: ${operator}`);
+  }
+};
+
 const stepLogic = () => {
   const operations = ['+', '-', '*'];
   const randomOperation = operations[generateRandomNumber(operations.length, 'floor')];
@@ -8,17 +21,9 @@ const stepLogic = () => {
   const b = generateRandomNumber(100);
 
   const message = `Question: ${a} ${randomOperation} ${b}`;
+  const answer = String(calculate(randomOperation, a, b));
 
-  switch (randomOperation) {
-    case '+':
-      return [message, `${a + b}`];
-    case '-':
-      return [message, `${a - b}`];
-    case '*':
-      return [message, `${a * b}`];
-    default:
-      return new Error(`Unknows operations: ${randomOperation}`);
-  }
+  return [message, answer];
 };
 
 const runBrainCalc = () => {
