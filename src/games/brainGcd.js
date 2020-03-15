@@ -11,7 +11,7 @@ const findGcd = (num1, num2) => {
       b %= a;
     }
   }
-  return `${a + b}`;
+  return a + b;
 };
 
 const stepLogic = () => {
@@ -19,7 +19,7 @@ const stepLogic = () => {
   const b = generateRandomNumber(100);
 
   const message = `Question: ${a} ${b}`;
-  const answer = findGcd(a, b);
+  const answer = String(findGcd(a, b));
 
   return [message, answer];
 };
