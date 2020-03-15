@@ -1,6 +1,8 @@
 import startGame from '../index.js';
 import generateRandomNumber from '../utils.js';
 
+const gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (num) => {
   const halfNum = Math.round(num / 2);
   for (let i = 2; i <= halfNum; i += 1) {
@@ -13,15 +15,12 @@ const isPrime = (num) => {
 
 const stepLogic = () => {
   const a = generateRandomNumber(100);
-
   const message = `Question: ${a}`;
   const answer = isPrime(a) ? 'yes' : 'no';
+
   return [message, answer];
 };
 
-const runBrainPrime = () => {
-  const gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  return startGame(gameConditions, stepLogic);
-};
+const runBrainPrime = () => startGame(gameConditions, stepLogic);
 
 export default runBrainPrime;

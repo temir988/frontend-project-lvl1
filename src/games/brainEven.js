@@ -1,6 +1,8 @@
 import startGame from '../index.js';
 import generateRandomNumber from '../utils.js';
 
+const gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 const isEven = (num) => num % 2 === 0;
 
 const stepLogic = () => {
@@ -11,9 +13,6 @@ const stepLogic = () => {
   return [message, answer];
 };
 
-const runBrainEven = () => {
-  const gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
-  return startGame(gameConditions, stepLogic);
-};
+const runBrainEven = () => startGame(gameConditions, stepLogic);
 
 export default runBrainEven;

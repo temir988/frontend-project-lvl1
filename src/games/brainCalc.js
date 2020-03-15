@@ -1,6 +1,9 @@
 import startGame from '../index.js';
 import generateRandomNumber from '../utils.js';
 
+const gameConditions = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
+
 const calculate = (operator, a, b) => {
   switch (operator) {
     case '+':
@@ -15,7 +18,6 @@ const calculate = (operator, a, b) => {
 };
 
 const stepLogic = () => {
-  const operations = ['+', '-', '*'];
   const randomOperation = operations[generateRandomNumber(operations.length, 'floor')];
   const a = generateRandomNumber(100);
   const b = generateRandomNumber(100);
@@ -26,9 +28,6 @@ const stepLogic = () => {
   return [message, answer];
 };
 
-const runBrainCalc = () => {
-  const gameConditions = 'What is the result of the expression?';
-  return startGame(gameConditions, stepLogic);
-};
+const runBrainCalc = () => startGame(gameConditions, stepLogic);
 
 export default runBrainCalc;
