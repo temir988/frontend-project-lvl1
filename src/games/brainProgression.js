@@ -22,10 +22,10 @@ const stepLogic = () => {
   const prevHidden = progression.slice(0, hiddenItemIndex).join(' ');
   const nextHidden = progression.slice(hiddenItemIndex + 1).join(' ');
 
-  const message = `Question: ${prevHidden} .. ${nextHidden}`;
+  const questionProgression = [`${prevHidden} .. ${nextHidden}`];
   const answer = String(progression[hiddenItemIndex]);
 
-  return [message, answer];
+  return [questionProgression, answer];
 };
 
 const runBrainProgression = () => startGame(gameConditions, stepLogic);

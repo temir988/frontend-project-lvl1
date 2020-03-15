@@ -7,10 +7,10 @@ const isEven = (num) => num % 2 === 0;
 
 const stepLogic = () => {
   const randomNumber = generateRandomNumber(100);
-  const message = `Question: ${randomNumber}`;
+  const questionArgs = [randomNumber];
   const answer = isEven(randomNumber) ? 'yes' : 'no';
 
-  return [message, answer];
+  return [questionArgs, answer];
 };
 
 const runBrainEven = () => startGame(gameConditions, stepLogic);

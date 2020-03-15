@@ -15,10 +15,10 @@ const isPrime = (num) => {
 
 const stepLogic = () => {
   const a = generateRandomNumber(100);
-  const message = `Question: ${a}`;
+  const questionArgs = [a];
   const answer = isPrime(a) ? 'yes' : 'no';
 
-  return [message, answer];
+  return [questionArgs, answer];
 };
 
 const runBrainPrime = () => startGame(gameConditions, stepLogic);
