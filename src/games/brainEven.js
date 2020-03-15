@@ -1,5 +1,7 @@
 import startGame from '../index.js';
-import { generateRandomNumber, isEven } from '../utils.js';
+import generateRandomNumber from '../utils.js';
+
+const isEven = (num) => num % 2 === 0;
 
 const stepLogic = () => {
   const randomNumber = generateRandomNumber(100);
