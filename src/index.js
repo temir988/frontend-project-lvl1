@@ -9,8 +9,8 @@ const startGame = (gameConditions, stepLogic) => {
   const steps = 3;
 
   for (let i = 0; i < steps; i += 1) {
-    const [args, correctAnswer] = stepLogic();
-    console.log(`Question: ${args.join(' ')}`);
+    const [questionArgs, correctAnswer] = stepLogic();
+    console.log(`Question: ${questionArgs.join(' ')}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 
