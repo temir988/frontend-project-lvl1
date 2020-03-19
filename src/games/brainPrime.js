@@ -4,6 +4,9 @@ import generateRandomNumber from '../utils.js';
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
   const halfNum = Math.round(num / 2);
   for (let i = 2; i <= halfNum; i += 1) {
     if (num % i === 0) {
