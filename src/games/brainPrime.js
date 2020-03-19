@@ -7,6 +7,7 @@ const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
+
   const halfNum = Math.round(num / 2);
   for (let i = 2; i <= halfNum; i += 1) {
     if (num % i === 0) {
@@ -17,9 +18,9 @@ const isPrime = (num) => {
 };
 
 const getStepData = () => {
-  const a = generateRandomNumber(0, 100);
-  const question = `${a}`;
-  const answer = isPrime(a) ? 'yes' : 'no';
+  const number = generateRandomNumber(0, 100);
+  const question = `${number}`;
+  const answer = isPrime(number) ? 'yes' : 'no';
 
   return [question, answer];
 };
