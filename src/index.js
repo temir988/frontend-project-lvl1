@@ -16,11 +16,11 @@ const startGame = (gameConditions, stepLogic) => {
 
     if (userAnswer !== correctAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}". \nLet's try again, ${name}!`);
-      return null;
+      return;
     }
     console.log('Correct!');
   }
-  return console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}`);
 };
 
 export default startGame;
