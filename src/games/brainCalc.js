@@ -18,12 +18,12 @@ const calculate = (operator, a, b) => {
 };
 
 const getStepData = () => {
-  const randomOperation = operations[generateRandomNumber(0, operations.length - 1)];
+  const operator = operations[generateRandomNumber(0, operations.length - 1)];
   const a = generateRandomNumber(0, 100);
   const b = generateRandomNumber(0, 100);
 
-  const question = `${a} ${randomOperation} ${b}`;
-  const answer = String(calculate(randomOperation, a, b));
+  const question = `${a} ${operator} ${b}`;
+  const answer = String(calculate(operator, a, b));
 
   return [question, answer];
 };
