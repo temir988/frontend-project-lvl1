@@ -1,7 +1,7 @@
 import startGame from '../index.js';
 import generateRandomNumber from '../utils.js';
 
-const gameConditions = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const generateProgression = (firstMember, difference, length) => {
@@ -14,7 +14,7 @@ const generateProgression = (firstMember, difference, length) => {
   return progression;
 };
 
-const stepLogic = () => {
+const getStepData = () => {
   const firstMember = generateRandomNumber(progressionLength);
   const difference = generateRandomNumber(progressionLength);
   const progression = generateProgression(firstMember, difference, progressionLength);
@@ -29,6 +29,6 @@ const stepLogic = () => {
   return [question, answer];
 };
 
-const runBrainProgression = () => startGame(gameConditions, stepLogic);
+const runBrainProgression = () => startGame(description, getStepData);
 
 export default runBrainProgression;

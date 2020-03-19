@@ -1,7 +1,7 @@
 import startGame from '../index.js';
 import generateRandomNumber from '../utils.js';
 
-const gameConditions = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
 const calculate = (operator, a, b) => {
@@ -17,7 +17,7 @@ const calculate = (operator, a, b) => {
   }
 };
 
-const stepLogic = () => {
+const getStepData = () => {
   const randomOperation = operations[generateRandomNumber(operations.length, 'floor')];
   const a = generateRandomNumber(100);
   const b = generateRandomNumber(100);
@@ -28,6 +28,6 @@ const stepLogic = () => {
   return [question, answer];
 };
 
-const runBrainCalc = () => startGame(gameConditions, stepLogic);
+const runBrainCalc = () => startGame(description, getStepData);
 
 export default runBrainCalc;
