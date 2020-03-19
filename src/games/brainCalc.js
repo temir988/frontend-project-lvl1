@@ -18,9 +18,9 @@ const calculate = (operator, a, b) => {
 };
 
 const getStepData = () => {
-  const randomOperation = operations[generateRandomNumber(operations.length, 'floor')];
-  const a = generateRandomNumber(100);
-  const b = generateRandomNumber(100);
+  const randomOperation = operations[generateRandomNumber(0, operations.length - 1)];
+  const a = generateRandomNumber(0, 100);
+  const b = generateRandomNumber(0, 100);
 
   const question = `${a} ${randomOperation} ${b}`;
   const answer = String(calculate(randomOperation, a, b));

@@ -1,6 +1,6 @@
-const generateRandomNumber = (range, round = 'round') => {
-  const randomNumber = Math.random() * range;
-  return Math[round](randomNumber);
+const generateRandomNumber = (min, max) => {
+  const randomNumber = Math.random() * (max - min + 1) + min;
+  return Math.floor(randomNumber);
 };
 
 export default generateRandomNumber;

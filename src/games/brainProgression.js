@@ -15,11 +15,11 @@ const generateProgression = (firstMember, difference, length) => {
 };
 
 const getStepData = () => {
-  const firstMember = generateRandomNumber(progressionLength);
-  const difference = generateRandomNumber(progressionLength);
+  const firstMember = generateRandomNumber(0, progressionLength - 1);
+  const difference = generateRandomNumber(1, progressionLength - 1);
   const progression = generateProgression(firstMember, difference, progressionLength);
 
-  const hiddenItemIndex = generateRandomNumber(10, 'floor');
+  const hiddenItemIndex = generateRandomNumber(0, progressionLength - 1);
   const prevHidden = progression.slice(0, hiddenItemIndex).join(' ');
   const nextHidden = progression.slice(hiddenItemIndex + 1).join(' ');
 

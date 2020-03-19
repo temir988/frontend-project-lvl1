@@ -17,8 +17,8 @@ const findGcd = (num1, num2) => {
 };
 
 const getStepData = () => {
-  const a = generateRandomNumber(100);
-  const b = generateRandomNumber(100);
+  const a = generateRandomNumber(0, 100);
+  const b = generateRandomNumber(0, 100);
 
   const question = `${a} ${b}`;
   const answer = String(findGcd(a, b));
