@@ -22,10 +22,10 @@ const stepLogic = () => {
   const a = generateRandomNumber(100);
   const b = generateRandomNumber(100);
 
-  const questionArgs = [a, randomOperation, b];
+  const question = `${a} ${randomOperation} ${b}`;
   const answer = String(calculate(randomOperation, a, b));
 
-  return [questionArgs, answer];
+  return [question, answer];
 };
 
 const runBrainCalc = () => startGame(gameConditions, stepLogic);

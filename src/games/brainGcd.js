@@ -20,10 +20,10 @@ const stepLogic = () => {
   const a = generateRandomNumber(100);
   const b = generateRandomNumber(100);
 
-  const questionArgs = [a, b];
+  const question = `${a} ${b}`;
   const answer = String(findGcd(a, b));
 
-  return [questionArgs, answer];
+  return [question, answer];
 };
 
 const runBrainGcd = () => startGame(gameConditions, stepLogic);
