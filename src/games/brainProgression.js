@@ -5,26 +5,25 @@ const description = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const generateProgression = (firstMember, difference, length) => {
-  const progression = [firstMember];
+  const progression = [];
 
-  for (let i = 1; i < length; i += 1) {
-    progression.push(progression[progression.length - 1] + difference);
+  for (let i = 0; i < length; i += 1) {
+    const element = firstMember + i * difference;
+    progression.push(element);
   }
 
   return progression;
 };
 
 const getStepData = () => {
-  const firstMember = generateRandomNumber(0, progressionLength - 1);
-  const difference = generateRandomNumber(1, progressionLength - 1);
+  const firstMember = generateRandomNumber(0, 10);
+  const difference = generateRandomNumber(1, 10);
   const progression = generateProgression(firstMember, difference, progressionLength);
-
   const hiddenItemIndex = generateRandomNumber(0, progressionLength - 1);
-  const prevHidden = progression.slice(0, hiddenItemIndex).join(' ');
-  const nextHidden = progression.slice(hiddenItemIndex + 1).join(' ');
 
-  const question = `${prevHidden} .. ${nextHidden}`;
   const answer = String(progression[hiddenItemIndex]);
+  progression[hiddenItemIndex] = '..';
+  const question = progression.join(' ');
 
   return [question, answer];
 };
