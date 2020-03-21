@@ -5,7 +5,7 @@
 
 ## Example brain-even
 
-[![asciicast](https://asciinema.org/a/bZkOAZ9xJ24MWXzBA888RIFeM.svg)](https://asciinema.org/a/w2nEr5CmZY43sC8oYjcdjdweH)
+[![asciicast](https://asciinema.org/a/w2nEr5CmZY43sC8oYjcdjdweH.svg)](https://asciinema.org/a/w2nEr5CmZY43sC8oYjcdjdweH)
 
 ## Example brain-calc
 
