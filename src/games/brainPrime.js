@@ -19,7 +19,7 @@ const isPrime = (num) => {
 
 const getStepData = () => {
   const number = generateRandomNumber(0, 100);
-  const question = `${number}`;
+  const question = String(number);
   const answer = isPrime(number) ? 'yes' : 'no';
 
   return [question, answer];

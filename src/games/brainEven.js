@@ -7,7 +7,7 @@ const isEven = (num) => num % 2 === 0;
 
 const getStepData = () => {
   const number = generateRandomNumber(0, 100);
-  const question = `${number}`;
+  const question = String(number);
   const answer = isEven(number) ? 'yes' : 'no';
 
   return [question, answer];
