@@ -2,7 +2,7 @@ import startGame from '../index.js';
 import generateRandomNumber from '../utils.js';
 
 const description = 'What is the result of the expression?';
-const operations = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 
 const calculate = (operator, a, b) => {
   switch (operator) {
@@ -13,12 +13,12 @@ const calculate = (operator, a, b) => {
     case '*':
       return a * b;
     default:
-      return new Error(`Unknows operations: ${operator}`);
+      return new Error(`Unknows operator: ${operator}`);
   }
 };
 
 const getStepData = () => {
-  const operator = operations[generateRandomNumber(0, operations.length - 1)];
+  const operator = operators[generateRandomNumber(0, operators.length - 1)];
   const a = generateRandomNumber(0, 100);
   const b = generateRandomNumber(0, 100);
 
